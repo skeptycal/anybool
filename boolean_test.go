@@ -2,6 +2,7 @@ package anybool
 
 import (
 	"testing"
+	"unicode"
 )
 
 /* Benchmark results for Booler (bool value vs interface value)
@@ -197,6 +198,7 @@ var boolerTests = []struct {
 	{"float32 42.0", AnyBooler(float32(42.0)), "true"},
 	{"float64 42.0", AnyBooler(float64(42.0)), "true"},
 
+	// complex
 	{"complex (0,0)", AnyBooler(complex(0, 0)), "false"},
 	{"complex (42,1)", AnyBooler(complex(42, 1)), "true"},
 
@@ -225,6 +227,10 @@ var boolerTests = []struct {
 	{"nil pointer", AnyBooler(nilPtr), "false"},
 	{"true pointer (not nil)", AnyBooler(truePtr), "true"},
 	{"false pointer (not nil)", AnyBooler(falsePtr), "true"},
+
+	// funcs
+	{"unicode.IsUpper('J')", AnyBooler(unicode.IsUpper('J')), "true"},
+	{"unicode.IsUpper('J')", AnyBooler(unicode.IsUpper('j')), "false"},
 }
 
 var newBoolTests = boolerTests[1:2]
@@ -308,25 +314,6 @@ func Test_anyBool_Disable(t *testing.T) {
 			b.Disable()
 			if got := b.String(); got != want {
 				t.Errorf("NewBool(%v) = %v, want %v", tt.name, got, want)
-			}
-		})
-	}
-}
-
-func TestIPAddr_String(t *testing.T) {
-	tests := []struct {
-		name string
-		i    IPAddr
-		want string
-	}{
-		// TODO: Add test cases.
-		{"127.0.0.1", IPAddr{127, 0, 0, 1}, "127.0.0.1"},
-		{"8.8.8.8", IPAddr{8, 8, 8, 8}, "8.8.8.8"},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := tt.i.String(); got != tt.want {
-				t.Errorf("IPAddr.String() = %v, want %v", got, tt.want)
 			}
 		})
 	}

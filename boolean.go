@@ -15,6 +15,9 @@ type (
 	Cosa     = types.Cosa
 )
 
+func IsTrue(v Any) bool  { return AnyBooler(v).AsBool() }
+func IsFalse(v Any) bool { return !AnyBooler(v).AsBool() }
+
 // AnyBooler returns a new anyBool value that implements Booler.
 // If the default value is a bool, the returned value will be
 // a NewBooler that is much more efficient than AnyBooler.

@@ -1,5 +1,7 @@
 package anybool // import "github.com/skeptycal/anybool"
 
+func IsFalse(v Any) bool
+func IsTrue(v Any) bool
 type Any = types.Any
 type Booler interface{ ... }
     func AnyBooler(defaultValue Any) Booler
