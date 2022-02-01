@@ -1,0 +1,8 @@
+package anybool // import "github.com/skeptycal/anybool"
+
+type Any = defaults.Any
+type Booler interface{ ... }
+    func AnyBooler(defaultValue Any) Booler
+    func NewBooler(v bool) Booler
+type Enabler = defaults.Enabler
+type Stringer = defaults.Stringer
