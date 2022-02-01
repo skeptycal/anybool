@@ -5,13 +5,14 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/skeptycal/defaults"
+	"github.com/skeptycal/types"
 )
 
 type (
-	Any      = defaults.Any
-	Stringer = defaults.Stringer
-	Enabler  = defaults.Enabler
+	Any      = types.Any
+	Stringer = types.Stringer
+	Enabler  = types.Enabler
+	Cosa     = types.Cosa
 )
 
 // AnyBooler returns a new anyBool value that implements Booler.

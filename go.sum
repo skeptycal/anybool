@@ -1,3 +1,2 @@
-github.com/logrusorgru/aurora v2.0.3+incompatible/go.mod h1:7rIyQOR62GCctdiQpZ/zOJlFyk6y+94wXzv6RNZgaR4=
-github.com/skeptycal/defaults v0.1.0-1643731169010399 h1:qf1WCFOwl35756DNSvVJ/3KZtLlgHDmGzPwMv9KgPK8=
-github.com/skeptycal/defaults v0.1.0-1643731169010399/go.mod h1:3LM7J/fLFPTsTgcg80MrET+fD6M4somERA7FBTW4SaA=
+github.com/skeptycal/types v0.1.0-1643732044523136 h1:jdKGF73m8ymmlVP3JD9x9YO8yiNclb6+lt3xRuxIDCA=
+github.com/skeptycal/types v0.1.0-1643732044523136/go.mod h1:fudJ1CeHnOWKuHX3RvRkMBSDA/Jx8KzE6XqIvJt8oCU=

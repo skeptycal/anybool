@@ -201,7 +201,7 @@ var boolerTests = []struct {
 	{"complex (42,1)", AnyBooler(complex(42, 1)), "true"},
 
 	// structs
-	{"empty struct (thing{})", AnyBooler(thing{}), "false"},
+	{"empty struct (thing{})", AnyBooler(Cosa{}), "false"},
 	{"false struct", AnyBooler(struct{ i int }{i: 0}), "false"},
 	{"true struct", AnyBooler(struct{ i int }{i: 1}), "true"},
 
